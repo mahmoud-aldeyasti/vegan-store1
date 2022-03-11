@@ -1,0 +1,783 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.2s linear;
+    list-style: none;
+
+    scroll-behavior: smooth;
+}
+
+
+
+:root{ 
+    --fusba:#F6FCFA;
+    --bfs1:#F7EEE2;
+    --ibfs1-s3:#E3B375;
+    --bfs2:#FFFFFF;
+    --foot:#232323;
+    --testomanil-card:#F5F6FB;
+    --links:#AAD236;
+    --para:#8B8B99;
+    --placeholder:#757575;
+    --subscribe-s4:#F69DAD;
+    --light-green-s2:#91AC41;
+    --dark-green-s1:#58E3B5;
+     font-size: 16px;
+  
+
+}
+.italic{
+    font-family: 'Caveat', cursive;
+
+    font-size: 24px!important;
+    color: var(--light-green-s2);
+
+
+}
+
+
+/* ______________________nav___________________________ */
+
+nav{
+    z-index: 10000;
+    width: 100%;
+    min-height: 10vh;
+    position: fixed;
+    background-color: var(--bfs2);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav .logo{
+    flex-basis: 8%;
+    text-align: center;
+    height: 100%;
+}
+
+nav .logo img{
+    width: 40px;
+    height: 40px;
+
+}
+nav .links{
+    flex-basis: 82%;
+    text-align: end;
+    height: 100%;
+    font-weight: 600;
+}
+
+nav .buynow{
+    flex-basis: 10%;
+    text-align: center;
+    height: 100%;
+}
+
+nav .sub{
+    opacity: 0;
+    position: absolute;
+    right: 18px;
+    text-align: left;
+    border-top: 2px solid var(--light-green-s2);
+    top: 30px;
+    width: 150px;
+    padding: 8px;
+    box-shadow: 0px 1px 8px 1px var(--placeholder);
+    font-weight: 200;
+    background-color: #FFFFFF;
+}
+nav .sub li{
+    margin: 0px 3px;
+    width: 120px;
+    border-bottom:1px solid var(--para);
+ 
+}
+nav .links .sup{
+    margin-right: -10px;
+}
+nav .links .sup li {
+    display: inline-block;
+    margin: 5px 5px;
+}
+
+nav .links .sup li:first-of-type{
+    position: relative;
+} 
+
+nav ul li a{
+    color: #000000;
+}
+
+nav .links .sup li:hover:first-of-type  .sub {
+    opacity: 1;
+}
+
+nav .buynow a{
+    background-color: var(--links);
+    width: 130px;
+    padding: 7px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-right: 50px;
+    display: inline-block;
+}
+
+
+/* ____________________ header_________________________ */
+header{
+    width: 100%;
+    min-height:100vh ;
+    position: relative;
+
+}
+header::after{
+    content: '' ;
+    background-image: url(../images/heading-image.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.7;
+
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+
+}
+
+
+.head{
+    background-color: transparent;
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header h1{
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline-block;
+    
+}
+header p{
+    text-align: center;
+    color: var(--para);
+    margin: 40px 0px;
+    font-size: 1em;
+}
+
+
+/* ____________________________________steps section________________________ */
+
+.steps{
+    width: 100%;
+ 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.step{
+    width: calc(100%/4);
+    min-height: 70vh;
+    text-align: center;
+    color: white;
+    padding: 30px 32px;
+    text-align: center;
+}
+
+.step .fa-solid{
+    font-size: 4em;
+    margin: 85px 0px 10px 0px;
+    display: inline-block;
+
+}
+
+.step h1{
+    display: inline-block;
+    margin: 10px 0px 10px 0px ;
+    line-height: 1.6;
+    font-size: 2em;
+
+}
+
+.step p{
+    font-size: 0.9em;
+    margin: 16px 5% 16px 5% ;
+    line-height: 1.5;
+    width: 90%;
+
+    
+}
+.step:nth-of-type(1){
+    background-color: var(--dark-green-s1);
+}
+.step:nth-of-type(2){
+    background-color: var(--light-green-s2);
+}
+
+.step:nth-of-type(3){
+    background-color: var(--ibfs1-s3);
+}
+
+.step:nth-of-type(4){
+    background-color: var(--subscribe-s4);
+}
+
+
+.step:hover .fa-solid{
+    transform: scale(1.2);
+}
+
+
+
+/* _____________________ services __________________ */
+
+.services{
+    background-color: var(--bfs1);
+    text-align: center;
+}
+
+.services span{
+    display: inline-block;
+    font-size: 1.25em;
+    color: var(--light-green-s2);
+    font-weight: 300;
+    margin: 150px 0px 20px 0px;
+   
+}
+
+.services h1{
+    font-size: 3em;
+    margin: 0px 0px 20px 0px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+.services p{
+    color: var(--para);
+    font-size: 1.2em;
+    margin: 16px 5% 16px 5% ;
+    line-height: 1.5;
+    width: 90%;
+    
+
+}
+
+.servicet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service h1{
+    font-size: 2em;
+}
+.service .icon{
+    border-radius: 50%;
+    background-color: var(--ibfs1-s3);
+    color: white;
+    width: 150px;
+    height: 150px;
+    margin: 30px 0px;
+    display: inline-block;
+
+}
+.service .icon .fa-solid , .service .icon .fa-brands{
+    font-size: 3.5em;
+}
+
+.service .icon:hover{
+    transform: scale(1.1);
+}
+
+.service{
+    margin: 20px 10px;
+    padding: 20px;
+    flex-basis: 300px;
+    min-height: 80vh;
+    text-align: center;
+}   
+ 
+
+
+/* ___________________ testomanials section _________________________  */
+.testomanials{
+    background-color: white;
+    text-align: center;
+}
+.testomanials p, .testomanials h2{
+    color: var(--para);
+}
+.test{
+    text-align: center;
+}
+
+.test span{
+    display: inline-block;
+    font-size: 1.25em;
+    color: var(--light-green-s2);
+    font-weight: 300;
+    margin: 150px 0px 20px 0px;
+   
+    text-align: center;
+}
+
+.test h1{
+    font-size: 3em;
+    margin: 0px 0px 20px 0px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: inline-block;
+    
+}
+
+.test p{
+    color: var(--para);
+    font-size: 1.2em;
+    margin: 16px 5% 16px 5% ;
+    line-height: 1.5;
+    width: 90%;
+}
+
+.testomanial{
+    background-color: var(--testomanil-card);
+    margin: 20px 20px 40px 20px;
+    padding: 20px;
+    flex-basis: 340px;
+    min-height: 55vh;
+    text-align: center;
+    border-radius: 42px 0px 42px 42px;
+}
+.testomanial:hover{
+    box-shadow: 0 12px 16px 0 rgb(39 39 47 / 6%);
+}
+
+.testomanial .imgt{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin: 40px 0px 20px 0px;
+    border-radius: 50%;
+}
+.testomanial .imgt img{
+    border-radius: 50%;
+    width: 100%;
+    height:100%;
+
+}
+.testomanial h2{
+    font-weight: 200;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: 1px 0px 1px 0px;
+   
+}
+.testomanial h1{
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 30px 0px 1px 0px;
+
+
+}
+.testomanial p{
+    line-height: 1.4;
+    font-size: 1em;
+    margin: 10px 0px 30px 0px;
+    padding: 0px 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* _________________________________ follow us section _____________________________ */
+.follow12{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+
+}
+
+.follow1{
+    background-image: url(../images/followus1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    width: 70%;
+    
+}
+.follow2{
+    width: 30%;
+    position: relative;
+
+}
+.follow2::after{
+    content: "";
+    background-image: url(../images/followus\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -2;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+.fol2{
+    position: absolute;
+    z-index: 200;
+    text-align: center;
+    width: 100%;
+    top: 60px;
+}
+
+.fol2 h1{
+    font-size: 2.4em;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 10px 0px 10px 0px;
+}
+
+.fol2 p{
+    font-size: 1em;
+    color: var(--para);
+    line-height: 1.6;
+    margin: 10px 0px 23px 0px;
+    padding: 10px 20%;
+
+
+}
+.fol2 form{
+    text-align: left;
+    padding-left: 20%;
+}
+
+.fol2 form input[type="submit"]{
+    color: white;
+    background-color: var(--subscribe-s4);
+    border: 1px solid var(--subscribe-s4);
+    padding: 13px 35px;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.7;
+    margin: 25px 0px;
+    border-radius: 6px;
+}
+.fol2 form input[type="submit"]:hover{
+    color: var(--subscribe-s4);
+    background-color:white;
+}
+
+.fol2 form input[type="email"]{
+    padding: 13px;
+    width: 80%;
+}
+.fol2 form input[type="email"]::placeholder{
+
+    color: var(--placeholder);
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.follow3{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 40vh;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--fusba);
+
+}
+
+.fol3{
+    flex-basis: 200px;
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.fol3 h1{
+    color: #000000;
+    font-weight: 500;
+    font-size: 2.5em;
+    line-height: 1.6;
+    margin: 20px;
+
+}
+
+.fol3 h2{
+    color: var(--dark-green-s1);
+    font-weight: 200;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 20px;
+
+}
+
+
+/* ____________________________ contact section ________________________ */
+.contact{
+    text-align: center;
+    width: 100%;
+}
+.contact > h1{
+color: var(--para);
+font-weight: 500;
+font-size: 2.7em;
+line-height: 1.6;
+margin: 30px 0px;
+}
+
+
+.contact .iframe{
+    width: 100%;
+    text-align: center;
+}
+.contact iframe{
+    border: 0px;
+    width: 80%!important;
+    height: 400px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.contact .line{
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    border-top: 1px solid #E4B476;
+}
+
+.contact .contactdiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 20px 0px;
+
+}
+.contactinfo{
+    flex-basis: 600px;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+}
+
+.contactinfo span{
+    color: var(--light-green-s2);
+}
+
+.contactinfo h1{
+    font-weight: 800;
+    font-size: 2.8em;
+    line-height: 1.6;
+    margin: 10px 0px;
+}
+.contactinfo p , .contactmail p{
+    color: var(--para);
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin: 7px 0px;
+}
+.contactinfo h2{
+
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 15px 0px;
+}
+
+.contactmail{
+    flex-basis: 500px;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+}
+.contactmail form input[type='submit']
+{
+    background-color: var(--links);
+    font-size: 1.1em;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    margin: 10px 0px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.contactmail h1{
+    font-weight: 800;
+    font-size: 2.8em;
+    line-height: 1.6;
+    margin: 10px 0px;
+}
+
+.contactmail form input[type="text"] , .contactmail form input[type="number"] , .contactmail form input[type="email"]{
+    width: 450px;
+    margin: 5px 0px;
+    padding: 10px 14px;
+}
+
+.contactmail form textarea{
+    width: 450px;
+    margin: 5px 0px;
+    padding: 10px 14px;
+    height: 80px;
+    resize: none;
+}
+
+.contactmail form input::placeholder , .contactmail form textarea::placeholder{
+    font-size: 1.2em;
+    color: var(--placeholder);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+/* ____________________ footer ______________________ */
+footer{
+    background-color: var(--foot);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+}
+footer p{
+    font-size: 0.9em;
+    font-weight: 200;
+    line-height: 1.7;
+    text-align: center;
+}
+
+
+
+/* __________________ maxsize = 1000px _______________________ */
+
+@media(max-width:1000px){
+
+    :root{
+        font-size: 14px!important;
+    }
+    .html{
+        font-size: 14px!important;
+    }
+    .step{
+        width: calc(100%/2);
+
+    }
+
+    .testomanial{
+        min-height: 32vh;
+    }
+    .step{
+       min-height: 35vh;
+    }
+    .service{
+        min-height:30vh;
+        margin-top: 5px ;
+        margin-bottom: 5px;
+    }
+    .follow1{
+        width: 60%;
+        
+        min-height: 450px;
+        
+    }
+    .follow2{
+        width: 40%;
+        min-height: 450px;
+    }
+    .fol2{
+
+        top: 20px;
+    }
+    .fol2 form input[type="submit"]{
+
+        margin: 10px 0px;
+
+    }
+    header h1{
+        text-align: center;
+        font-size: 3em;
+        margin: 40px 0px 10px 0px;
+        font-weight: 600;
+        line-height: 1.4;
+        display: inline-block;
+    }
+}
+
+/* ___________________ max width = 600px__________________ */
+
+@media(max-width:600px){
+    :root{
+        font-size: 10px!important;
+    }
+    .html{
+        font-size: 10px!important;
+    }
+    .step{
+        width: 100%;
+
+    }
+    .follow1{
+
+        width: 100%;
+        
+    }
+    .follow2{
+        width: 100%;
+        min-height: 40vh;
+    }
+    .contactmail form input[type="text"] , .contactmail form input[type="number"] , .contactmail form input[type="email"]{
+        width: 90%;
+    }
+    
+    .contactmail form textarea{
+        width: 90%;
+    }
+
+       
+}
